@@ -20,7 +20,7 @@ jobs:
 
         # TODO - Setup Gradle
       - name: Setup Grade
-        uses: actions/setup-gradle@latest
+        uses: gradle/actions/setup-gradle@latest
 
         # TODO - Run een gradle build command
       - name: Build using configured Java and Gradle dist
