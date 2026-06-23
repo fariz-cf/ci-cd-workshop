@@ -18,10 +18,10 @@ jobs:
           java-version: '21'
           distribution: temurin
 
-        # TODO - Setup Gradle
+      # TODO - Setup Gradle
       - name: Setup Grade
         uses: gradle/actions/setup-gradle@v6
 
-        # TODO - Run een gradle build command
+      # TODO - Run een gradle build command
       - name: Build using configured Java and Gradle dist
-        run: ./gradlew build
+        run: ./gradlew build --configuration-cache
