@@ -24,4 +24,4 @@ jobs:
 
         # TODO - Run een gradle build command
       - name: Build using configured Java and Gradle dist
-        run: run: ./gradlew -b ci.gradle package
+        run: ./gradlew -b ci.gradle package
