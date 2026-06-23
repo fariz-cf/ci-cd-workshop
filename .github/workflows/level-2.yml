@@ -24,7 +24,7 @@ jobs:
 
       # TODO - Run een gradle test command
       - name: Run Gradle test
-        run: ./gradlew test
+        run: ./gradlew test --configuration-cache
 
       # TODO - Upload een test rapport met het resultaat van de gedraaide testen
       - name: Upload gradle test report
