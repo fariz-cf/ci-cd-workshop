@@ -1,7 +1,7 @@
 name: Level 1 - Yoshi's Island
 
 on:
-  workflow_dispatch: {} # TODO: Bonus opdracht, vervang door een echte trigger.
+  push
 
 jobs:
   build:
@@ -20,7 +20,7 @@ jobs:
 
         # TODO - Setup Gradle
       - name: Setup Grade
-        uses: gradle/actions/setup-gradle@latest
+        uses: gradle/actions/setup-gradle@v6
 
         # TODO - Run een gradle build command
       - name: Build using configured Java and Gradle dist
