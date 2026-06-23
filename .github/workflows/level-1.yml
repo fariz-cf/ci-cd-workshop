@@ -1,7 +1,7 @@
 name: Level 1 - Yoshi's Island
 
 on:
-  push
+  workflow_dispatch: {} # TODO: Bonus opdracht, vervang door een echte trigger.
 
 jobs:
   build:
