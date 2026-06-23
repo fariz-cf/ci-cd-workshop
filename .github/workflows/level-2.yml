@@ -11,10 +11,27 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v6
 
-        # TODO - Configureer JDK 21 - hint: wellicht ook iets met actions?
+      # TODO - Configureer JDK 21 - hint: wellicht ook iets met actions?
+      - name: Configure JDK 21
+        uses: actions/setup-java@v5
+        with:
+          java-version: '21'
+          distribution: temurin
 
-        # TODO - Setup Gradle
+      # TODO - Setup Gradle
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v6
 
-        # TODO - Run een gradle test command
+      # TODO - Run een gradle test command
+      - name: Run Gradle test
+        run: ./gradlew test
 
-        # TODO - Upload een test rapport met het resultaat van de gedraaide testen
+      # TODO - Upload een test rapport met het resultaat van de gedraaide testen
+      - name: Upload gradle test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-reports
+          path: |
+            build/test-results/test
+            build/reports/tests/test
